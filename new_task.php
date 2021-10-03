@@ -10,13 +10,13 @@ $channel->queue_Declare('hello', false, false, false, false);
 $data = implode(' ', array_slice($argv, 1));
 
 if (empty($data)) {
-	$data = 'Hello World!";
+	$data = 'Hello World!';
 }
 $msg = new AMQPMessage($data);
 
 $channel->basic_publish($msg, '', 'hello');
 
-echo ' [x] Sent ', '$data, "\n";
+echo ' [x] Sent ', $data, "\n";
 
 $channel->basic_publish($msg, '', 'hello');
 
