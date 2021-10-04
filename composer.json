@@ -4,7 +4,7 @@
     },
     "scripts": {
         "update-deploy-containers": [
-            "git clone https://github.com/ksoz/IT490_Group3_CastleWar.git",
+            "sudo git pull origin master",
             "service mysql start",
             "php worker.php"
             ]
