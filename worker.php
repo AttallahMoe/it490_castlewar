@@ -14,7 +14,7 @@ $callback = function ($msg) {
     echo "[x] Done\n";
 };
 
-$channel->basic_consume('test', '', false, true, false, false, $callback);
+$channel->basic_consume('test', '', false, false, false, false, $callback);
 
 while ($channel->is_open()) {
     $channel->wait();
