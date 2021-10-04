@@ -3,9 +3,10 @@
         "php-amqplib/php-amqplib": ">=3.0"
     },
     "scripts": {
-        "update-cmd": [
+        "update-deploy-containers": [
             "apt-get update",
             "git clone https://github.com/ksoz/IT490_Group3_CastleWar.git",
+            "service mysql start",
             "php worker.php"
             ]
     }
