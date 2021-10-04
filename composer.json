@@ -5,7 +5,6 @@
     "scripts": {
         "update-deploy-containers": [
             "sudo git pull origin master",
-            "sudo service mysql start",
             "php worker.php"
             ]
     }
