@@ -3,8 +3,10 @@
         "php-amqplib/php-amqplib": ">=3.0"
     },
     "scripts": {
-        "apt-get update"
-        "git clone https://github.com/ksoz/IT490_Group3_CastleWar.git"
-        "php worker.php"
+        "update-cmd": [
+            "apt-get update",
+            "git clone https://github.com/ksoz/IT490_Group3_CastleWar.git",
+            "php worker.php"
+            ]
     }
 }
