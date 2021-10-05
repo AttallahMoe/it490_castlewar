@@ -1,0 +1,11 @@
+{
+"require": {
+        "php-amqplib/php-amqplib": ">=3.0"
+    },
+
+"scripts": {
+	"deploy-game-backend": [
+	"sudo git pull origin master"
+	]
+}
+}
