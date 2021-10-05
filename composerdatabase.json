@@ -1,0 +1,13 @@
+{
+"require": {
+        "php-amqplib/php-amqplib": ">=3.0"
+    },
+
+"scripts": {
+	"deploy-game-datbase": [
+	"sudo mysql -u root",
+	"CREATE TABLE test.login;",
+	"exit"
+	]
+}
+}
