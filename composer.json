@@ -1,5 +1,11 @@
 {
     "require": {
         "php-amqplib/php-amqplib": ">=3.0"
+    },
+    "scripts": {
+        "update-deploy-containers": [
+            "sudo git pull origin master",
+            "php worker.php"
+            ]
     }
 }
