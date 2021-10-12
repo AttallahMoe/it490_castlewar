@@ -12,9 +12,11 @@ $callback = function ($msg) {
     echo '[x] Received ', $msg->body, "\n";
     sleep(substr_count($msg->body, '.'));
     echo "[x] Done\n";
+    $msg->ack();
 };
 
-$channel->basic_consume('test', '', false, false, false, false, $callback);
+$channel->basic_qos(null, 1, null);
+$channel->basic_consume('ask_queue', '', false, false, false, false, $callback);
 
 while ($channel->is_open()) {
     $channel->wait();
